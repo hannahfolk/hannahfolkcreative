@@ -17,5 +17,10 @@
     "react-awesome-slider": "4.1.0",
     "react-dom": "18.2.0",
     "sass": "1.69.5"
+  },
+  "devDependencies": {
+    "@types/node": "20.8.9",
+    "@types/react": "18.2.33",
+    "typescript": "5.2.2"
   }
 }

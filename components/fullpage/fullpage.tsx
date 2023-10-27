@@ -1,22 +1,19 @@
 import { useRef } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
-import "react-awesome-slider/dist/custom-animations/fall-animation.css";
-import "react-awesome-slider/dist/custom-animations/fold-out-animation.css";
-import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
-import "react-awesome-slider/dist/custom-animations/open-animation.css";
 import {
   withNavigationHandlers,
   withNavigationContext,
 } from "react-awesome-slider/dist/navigation";
 import { media } from "./media";
-import Startup from "../startup/startup";
+import Startup from "@components/startup/startup";
 
 const Slider = withNavigationHandlers(AwesomeSlider);
 
 export default withNavigationContext(({ fullpage }) => {
+  console.log({ fullpage });
   const isFirstLoad = useRef(true);
-  const animation = fullpage.navigation.animation || `foldOutAnimation`;
+  const animation = "cubeAnimation";
 
   return (
     <Slider

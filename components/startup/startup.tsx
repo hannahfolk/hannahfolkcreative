@@ -1,5 +1,5 @@
 import Image from "next/image";
-import loading from "../../public/images/running.png";
+import loading from "@public/images/running.png";
 
 const Startup = () => {
   return (

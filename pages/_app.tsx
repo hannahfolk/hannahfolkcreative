@@ -3,9 +3,10 @@ import { Provider } from "react-awesome-slider/dist/navigation";
 import Layout from "../components/layout/layout";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import type { AppProps } from "next/app";
 import "../styles/main.scss";
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   return (
