@@ -3,10 +3,9 @@ import { Provider } from "react-awesome-slider/dist/navigation";
 import Layout from "../components/layout/layout";
 import { useRouter } from "next/router";
 import Head from "next/head";
-import type { AppProps } from "next/app";
 import "../styles/main.scss";
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }) {
   const router = useRouter();
 
   return (
@@ -23,7 +22,7 @@ function App({ Component, pageProps }: AppProps) {
           name="description"
           content="Fullpage navigation HOC with 3D animated transitions built on top of React Awesome Slider. GatsbyJS and NextJS recipes available."
         />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/static/favicon.ico" />
       </Head>
       <Layout>
         <Component {...pageProps} />

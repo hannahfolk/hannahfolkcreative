@@ -1,4 +1,5 @@
-import Nav from "@components/nav/nav";
+import React from "react";
+import Nav from "../nav/nav";
 
 const Layout = ({ children }) => {
   return (

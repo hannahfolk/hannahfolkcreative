@@ -1,24 +1,27 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
+import "react-awesome-slider/dist/custom-animations/fall-animation.css";
+import "react-awesome-slider/dist/custom-animations/fold-out-animation.css";
+import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
+import "react-awesome-slider/dist/custom-animations/open-animation.css";
 import {
   withNavigationHandlers,
-  withNavigationContext,
+  withNavigationContext
 } from "react-awesome-slider/dist/navigation";
 import { media } from "./media";
-import Startup from "@components/startup/startup";
+import Startup from "../startup/startup";
 
 const Slider = withNavigationHandlers(AwesomeSlider);
 
 export default withNavigationContext(({ fullpage }) => {
-  console.log({ fullpage });
   const isFirstLoad = useRef(true);
-  const animation = "cubeAnimation";
+  const animation = fullpage.navigation.animation || `cubeAnimation`;
 
   return (
     <Slider
       startupScreen={<Startup />}
-      startupDelay={10000}
+      startupDelay={3000}
       animation={animation}
       className="awesome-slider"
       onTransitionEnd={() => {

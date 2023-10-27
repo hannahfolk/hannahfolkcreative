@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Select = ({ options = [], onChange, selected }) => {
   const renderOptions = () => {
     return options.map(({ value, label }) => {
@@ -12,7 +14,7 @@ const Select = ({ options = [], onChange, selected }) => {
   return (
     <select
       value={selected}
-      onChange={(event) => {
+      onChange={event => {
         onChange(event.currentTarget.value);
       }}
     >

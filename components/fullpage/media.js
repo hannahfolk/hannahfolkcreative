@@ -1,17 +1,18 @@
+import React from "react";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/themes/theme-c137.css";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
-import Lettering from "@components/lettering/lettering";
-import Background from "@components/background/background";
-import Content from "@components/content/content";
-import Mouse from "@components/mouse/mouse";
-import Section from "@components/section/section";
-import Page from "@components/page/page";
+import Lettering from "../lettering/lettering";
+import Background from "../background/background";
+import Content from "../content/content";
+import Mouse from "../mouse/mouse";
+import Section from "../section/section";
+import Page from "../page/page";
 
 export const Home = withNavigationContext(({ fullpage }) => {
   return (
     <Section wrapper={false} backgroundColor="#292c35">
-      <Background src="https://caferati.me/images/series/bojack-0.png" />
+      <img src="/images/pubu.png" />
       <Content
         main={
           <Lettering

@@ -1,4 +1,6 @@
-const Lettering = ({ text = [], title = "" }) => {
+import React from 'react';
+
+const Lettering = ({ text = [], title = '' }) => {
   const renderText = () => {
     return text && text.length
       ? text.map((line, index) => {
