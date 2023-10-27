@@ -1,6 +1,3 @@
-import React from 'react';
-import './react-logo.scss';
-
 const ReactLogo = () => {
   return (
     <div className="logo-container">

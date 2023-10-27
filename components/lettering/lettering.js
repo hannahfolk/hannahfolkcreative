@@ -1,7 +1,4 @@
-import React from 'react';
-import './lettering.css';
-
-const Lettering = ({ text = [], title = '' }) => {
+const Lettering = ({ text = [], title = "" }) => {
   const renderText = () => {
     return text && text.length
       ? text.map((line, index) => {

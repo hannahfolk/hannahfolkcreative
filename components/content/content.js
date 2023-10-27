@@ -1,29 +1,27 @@
-import React from "react";
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Select from "../select/select";
-import "./content.scss";
 
 const options = [
   {
     label: "Cube Animation",
-    value: "cubeAnimation"
+    value: "cubeAnimation",
   },
   {
     label: "Fall Animation",
-    value: "fallAnimation"
+    value: "fallAnimation",
   },
   {
     label: "Fold Out Animation",
-    value: "foldOutAnimation"
+    value: "foldOutAnimation",
   },
   {
     label: "Open Animation",
-    value: "openAnimation"
+    value: "openAnimation",
   },
   {
     label: "Scale Out Animation",
-    value: "scaleOutAnimation"
-  }
+    value: "scaleOutAnimation",
+  },
 ];
 
 const Content = withNavigationContext(({ fullpage, main, action }) => {
@@ -34,10 +32,10 @@ const Content = withNavigationContext(({ fullpage, main, action }) => {
         <div className="content__action__select">
           <Select
             selected={fullpage.navigation.animation || `foldOutAnimation`}
-            onChange={value => {
+            onChange={(value) => {
               fullpage.navigate({
                 ...fullpage.navigation,
-                animation: value
+                animation: value,
               });
             }}
             options={options}

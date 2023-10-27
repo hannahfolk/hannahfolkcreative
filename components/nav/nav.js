@@ -1,10 +1,8 @@
-import React from "react";
 import {
   withNavigationContext,
-  Link
+  Link,
 } from "react-awesome-slider/dist/navigation";
 import ReactLogo from "../react-logo/react-logo";
-import "./nav.scss";
 
 const Nav = withNavigationContext(({ fullpage }) => {
   const { slug } = fullpage.navigation;

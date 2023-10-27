@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactLogo from '../react-logo/react-logo';
-import './startup.scss';
+import Image from "next/image";
+import loading from "../../public/images/running.png";
 
 const Startup = () => {
   return (
     <div className="startup">
-      <ReactLogo />
+      <Image src={loading} alt="ninja running to the right" />
     </div>
   );
 };
